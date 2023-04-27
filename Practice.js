@@ -1,6 +1,8 @@
-var a=10;
-var b=20;
-a=a+b;
-b=a-b;
-a=a-b;
-console.log("After swapping ---> \na="+ a +"\nb="+ b);
+prompt = require("prompt-sync")();
+const year = parseInt(prompt('Enter year'));
+if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+    console.log("Leap Year");
+}
+else {
+    console.log("Not leap year");
+}
