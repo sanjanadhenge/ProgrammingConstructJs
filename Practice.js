@@ -1,22 +1,17 @@
 prompt = require("prompt-sync")();
-const operator = prompt('Enter operator ( either +, -, * or / ): ');
+function countString(str, letter) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
 
-const number1 = parseFloat(prompt('Enter first number: '));
-const number2 = parseFloat(prompt('Enter second number: '));
-
-let result;
-
-if (operator == '+') {
-    result = number1 + number2;
-}
-else if (operator == '-') {
-    result = number1 - number2;
-}
-else if (operator == '*') {
-    result = number1 * number2;
-}
-else {
-    result = number1 / number2;
+        if (str.charAt(i) == letter) {
+            count += 1;
+        }
+    }
+    return count;
 }
 
-console.log(`${number1} ${operator} ${number2} = ${result}`);
+const string = prompt('Enter a string: ');
+const letterToCheck = prompt('Enter a letter to check: ');
+const result = countString(string, letterToCheck);
+
+console.log(result);
