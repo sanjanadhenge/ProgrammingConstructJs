@@ -1,21 +1,22 @@
 //prompt = require("prompt-sync")();
 let arr =[19,98,53,69,75,99,101];
 var temp=0;
-for(let i=0;i<arr.length;i++)
+let newarr = arr.map(Math.abs());
+for(let i=0;i<newarr.length;i++)
 {
-    for(let j=i;j<arr.length;j++)
+    for(let j=i;j<newarr.length;j++)
     {
-         if(arr[i]>arr[j])
+         if(newarr[i]>newarr[j])
             {
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
+                temp=newarr[i];
+                newarr[i]=newarr[j];
+                newarr[j]=temp;
             }
         
     }
 }
-for(let i=0;i<arr.length;i++)
+for(let i=0;i<newarr.length;i++)
 {
-    console.log("\n"+arr[i]);
+    console.log("\n"+newarr[i]);
 }
 
