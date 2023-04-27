@@ -1,22 +1,10 @@
-//prompt = require("prompt-sync")();
-let arr =[19,98,53,69,75,99,101];
-var temp=0;
-let newarr = arr.map(Math.abs());
-for(let i=0;i<newarr.length;i++)
+prompt = require("prompt-sync")();
+var str = String(prompt('Enter string'));
+var str2=" ";
+let a=0;
+for(let i=str.length-1;i>=0;i--)
 {
-    for(let j=i;j<newarr.length;j++)
-    {
-         if(newarr[i]>newarr[j])
-            {
-                temp=newarr[i];
-                newarr[i]=newarr[j];
-                newarr[j]=temp;
-            }
-        
-    }
+    str2[a]=str[i];
+    a++;
 }
-for(let i=0;i<newarr.length;i++)
-{
-    console.log("\n"+newarr[i]);
-}
-
+console.log(str2);
