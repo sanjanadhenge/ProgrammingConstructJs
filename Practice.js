@@ -1,12 +1,21 @@
-prompt = require("prompt-sync")();
-var num = parseInt(prompt('Enter Number'));
-console.log("Reversing the number");
-var a=0, rev=0;
-while(num !=0)
+//prompt = require("prompt-sync")();
+let arr =[19,98,53,69,75,99,101];
+var temp=0;
+for(let i=0;i<arr.length;i++)
 {
-     a= num %10;
-     rev = (rev *10)+ a;
-    num = Math.floor(num/10);
+    for(let j=i;j<arr.length;j++)
+    {
+         if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        
+    }
 }
-console.log("After reversing the number---->"+rev);
+for(let i=0;i<arr.length;i++)
+{
+    console.log("\n"+arr[i]);
+}
 
